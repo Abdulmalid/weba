@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Havenly Homes | Trusted Property Marketplace</title>
+    <meta
+      name="description"
+      content="Browse verified homes, explore map-based search, and connect with trusted agents on Havenly Homes."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <div class="brand">Havenly Homes</div>
+        <nav aria-label="Primary">
+          <ul class="nav-list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#search">Search</a></li>
+            <li><a href="#listing">Listing</a></li>
+            <li><a href="#buyer">Buyer</a></li>
+            <li><a href="#seller">Seller</a></li>
+            <li><a href="#admin">Admin</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#help">Help</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section id="home" class="hero">
+        <div class="container hero-grid">
+          <div>
+            <p class="eyebrow">Verified listings • Trusted agents • Secure inquiries</p>
+            <h1>Find your perfect home with confidence.</h1>
+            <p>
+              Search homes made simple. Browse detailed listings, view map insights,
+              and connect with real people ready to help.
+            </p>
+            <div class="hero-cta-row">
+              <a class="btn btn-primary" href="#search">Search Homes</a>
+              <a class="btn btn-secondary" href="#pricing">See Pricing</a>
+            </div>
+            <div class="trust-row" aria-label="Trust indicators">
+              <span>✓ Verified Listings</span>
+              <span>✓ 24/7 Support</span>
+              <span>✓ Secure Payments</span>
+            </div>
+          </div>
+          <div class="hero-card" aria-hidden="true">
+            <h2>Featured Neighborhood</h2>
+            <p>Riverside District • 28 new listings this week</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="search" class="section container">
+        <div class="section-header">
+          <h2>Search & Results</h2>
+          <button id="filterToggle" class="btn btn-secondary" type="button">Toggle Filters</button>
+        </div>
+        <div class="search-layout">
+          <aside id="filterPanel" class="panel" aria-label="Filter panel">
+            <h3>Filters</h3>
+            <label>Budget
+              <input type="range" min="500" max="5000" value="2200" />
+            </label>
+            <label>Bedrooms
+              <select>
+                <option>Any</option>
+                <option>1+</option>
+                <option>2+</option>
+                <option>3+</option>
+              </select>
+            </label>
+            <label>Property Type
+              <select>
+                <option>Any</option>
+                <option>Apartment</option>
+                <option>Townhouse</option>
+                <option>Villa</option>
+              </select>
+            </label>
+            <button class="btn btn-primary" type="button">Apply Filters</button>
+          </aside>
+
+          <div class="results-column">
+            <div class="map-box" role="img" aria-label="Map placeholder with listing pins">
+              <p>Interactive Map View (Pins & Clusters)</p>
+            </div>
+
+            <div id="skeletons" class="cards-grid" aria-hidden="true">
+              <div class="skeleton-card"></div>
+              <div class="skeleton-card"></div>
+              <div class="skeleton-card"></div>
+            </div>
+
+            <div id="results" class="cards-grid hidden" aria-live="polite"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="listing" class="section container">
+        <h2>Listing Detail</h2>
+        <div class="listing-layout">
+          <div class="gallery" aria-label="Listing gallery">
+            <img loading="lazy" src="https://picsum.photos/seed/home1/800/460" alt="Living room with natural light" />
+            <img loading="lazy" src="https://picsum.photos/seed/home2/800/460" alt="Modern kitchen interior" />
+          </div>
+          <aside class="panel sticky">
+            <h3>$1,250,000 • 3 Bed • 2 Bath</h3>
+            <p>12 Lakeview Avenue, Riverside</p>
+            <div class="cta-stack">
+              <button class="btn btn-primary" type="button">Contact Agent</button>
+              <button id="saveButton" class="btn btn-secondary" type="button" aria-pressed="false">♡ Save Listing</button>
+              <button class="btn btn-secondary" type="button">Schedule Viewing</button>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="buyer" class="section container">
+        <h2>Buyer Dashboard (Preview)</h2>
+        <div class="cards-grid">
+          <article class="panel"><h3>Saved Listings</h3><p>8 active saved homes.</p></article>
+          <article class="panel"><h3>Recent Inquiries</h3><p>3 responses this week.</p></article>
+          <article class="panel"><h3>Recommended Homes</h3><p>New matches based on your searches.</p></article>
+        </div>
+      </section>
+
+      <section id="seller" class="section container">
+        <h2>Seller Dashboard (Preview)</h2>
+        <div class="cards-grid">
+          <article class="panel"><h3>Manage Listings</h3><p>Create, edit, and publish homes.</p></article>
+          <article class="panel"><h3>Message Center</h3><p>Real-time buyer chats and alerts.</p></article>
+          <article class="panel"><h3>Performance Analytics</h3><p>Views, saves, and inquiry trends.</p></article>
+        </div>
+      </section>
+
+      <section id="admin" class="section container">
+        <h2>Admin Panel (Preview)</h2>
+        <div class="cards-grid">
+          <article class="panel"><h3>Moderation Queue</h3><p>Flagged listings awaiting review.</p></article>
+          <article class="panel"><h3>User Verification</h3><p>KYC checks and account approvals.</p></article>
+          <article class="panel"><h3>Site Analytics</h3><p>Users, listings, and revenue overview.</p></article>
+        </div>
+      </section>
+
+      <section id="pricing" class="section container">
+        <h2>Pricing Plans</h2>
+        <div class="cards-grid">
+          <article class="panel"><h3>Starter</h3><p>1 active listing</p><strong>$29/mo</strong></article>
+          <article class="panel"><h3>Growth</h3><p>10 active listings</p><strong>$99/mo</strong></article>
+          <article class="panel"><h3>Agency</h3><p>Unlimited listings</p><strong>$249/mo</strong></article>
+        </div>
+      </section>
+
+      <section id="help" class="section container">
+        <h2>Help & FAQ</h2>
+        <details class="panel"><summary>How do I list a property?</summary><p>Create an account, open Seller Dashboard, and use “Manage Listings”.</p></details>
+        <details class="panel"><summary>Are listings verified?</summary><p>Yes. Listings pass our moderation checks before publishing.</p></details>
+      </section>
+    </main>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© 2026 Havenly Homes • Privacy • Terms • Contact</p>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
